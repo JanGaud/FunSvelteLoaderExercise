@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flowbite-Svelte-Starter
 
 ## Demo
@@ -58,3 +59,7 @@ pnpm i -D flowbite-svelte@latest
 ```sh
 git checkout jaco
 ```
+=======
+# FunSvelteLoaderExercise
+Dans le but de pratiquer mes notions des loader svelte
+>>>>>>> 6c1a857981f92a3e30aed8d35648434c24d93f09
