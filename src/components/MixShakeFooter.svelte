@@ -12,7 +12,7 @@
 
 <Footer footerType="logo" class="bg-[#ffffff38] backdrop-blur-2xl">
 	<div class="sm:flex sm:items-center sm:justify-between">
-		<a href="/"> <Icon icon="ep:cold-drink" class="me-3 h-10 w-10" /></a>
+		<a href="/"> <Icon icon="ep:cold-drink" class="me-3 h-10 w-10 text-brand-gray" /></a>
 		<FooterLinkGroup
 			ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0"
 		>
