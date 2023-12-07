@@ -1,9 +1,13 @@
 <script>
-	import '../app.css';
-	import { DarkMode } from 'flowbite-svelte';
-	let darkmodebtn =
-		'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-lg p-2.5 fixed right-4 top-2 z-50';
+    import '../app.css';
+    import Navbar from '../components/Navbar.svelte';
+    import MixShakeFooter from '../components/MixShakeFooter.svelte';
 </script>
 
-<DarkMode btnClass={darkmodebtn} />
-<slot />
+<main class="min-h-screen bg-no-repeat bg-fixed bg-center bg-cover" style="background-image: url('/img/BackgroundImg.png');">
+    <Navbar />
+    <section class="px-2 sm:px-20 py-28">
+        <slot />
+    </section>
+    <MixShakeFooter />
+</main>

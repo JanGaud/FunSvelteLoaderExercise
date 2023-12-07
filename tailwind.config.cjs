@@ -5,9 +5,18 @@ const config = {
 	],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				'main-green': '#97ca4b',
+				'spark-yellow': '#f6f930',
+				'brand-gray': '#2f2f2f',
+			},
+			fontFamily: {
+				'main': ['Raleway', 'sans-serif'],
+				'secondary': ['Rajdhani', 'sans-serif'],
+			},
+		}
 	},
-
 	plugins: [require('flowbite/plugin')],
 	darkMode: 'class'
 };
