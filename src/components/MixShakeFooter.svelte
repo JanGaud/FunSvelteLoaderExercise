@@ -6,9 +6,9 @@
 		'text-brand-gray hover:text-main-green transition transition-colors font-secondary';
 </script>
 
-<Footer footerType="logo" class="bg-[#ffffff38] backdrop-blur-2xl">
+<Footer class="bg-[#ffffff59] backdrop-blur-3xl" footerType="logo">
 	<div class="sm:flex sm:items-center sm:justify-between">
-		<a href="/"> <Icon icon="ep:cold-drink" class="me-3 h-10 w-10 text-brand-gray" /></a>
+		<a href="/"> <Icon icon="ep:cold-drink" class="me-3 h-10 w-10 hover:animate-pulse {linkClass}" /></a>
 		<FooterLinkGroup ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0">
 			<FooterLink aClass={linkClass} href="/a-propos">À propos</FooterLink>
 			<FooterLink aClass={linkClass} href="/confidentialite">Politique de confidentialité</FooterLink
