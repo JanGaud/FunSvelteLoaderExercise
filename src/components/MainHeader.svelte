@@ -4,7 +4,7 @@
 </script>
 
 <div class="text-center py-10 px-4">
-	<Heading tag="h1" class="mb-4 drop-shadow-lg" customSize="text-4xl font-extrabold md:text-5xl lg:text-6xl"
+	<Heading tag="h1" class="mb-4 drop-shadow-lg" customSize="text-4xl font-semibold md:text-5xl lg:text-6xl"
 		>La référence en mixologie!</Heading
 	>
 	<P class="mb-6 text-lg lg:text-xl tracking-wider font-semibold sm:px-16 xl:px-48">
