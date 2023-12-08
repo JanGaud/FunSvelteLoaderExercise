@@ -19,7 +19,7 @@
 	</NavBrand>
 	<NavHamburger />
 	<NavUl>
-		<NavLi nonActiveClass={linkClass} href="/exercice-1">Exercice 1</NavLi>
+		<NavLi nonActiveClass={linkClass} href="/populaire">Populaire</NavLi>
 		<NavLi nonActiveClass={linkClass} href="/">Exercice 2</NavLi>
 		<NavLi nonActiveClass={linkClass} href="/">Exercice 3</NavLi>
 		<NavLi nonActiveClass={linkClass} href="/">Exercice 4</NavLi>

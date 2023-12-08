@@ -3,7 +3,10 @@
 	import {  } from 'flowbite-svelte';
     import { onMount } from 'svelte';
 
-    export let cocktails = [];
+    /**
+	 * @type {string | any[]}
+	 */
+     export let cocktails = [];
 
 
     onMount(async () => {
@@ -51,7 +54,7 @@
 		{/each}
 		{:else}
 			{#each Array(6) as _, i}
-				<ImagePlaceholder class="bg-[#ffffff25] backdrop-blur-xl shadow-lg" />
+				<ImagePlaceholder class="bg-[#ffffff25] backdrop-blur-xl shadow-lg pr-4" />
 			{/each}
 		{/if}
 	</div>
