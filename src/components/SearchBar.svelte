@@ -10,8 +10,11 @@
 	 * @type {never[]}
 	 */
 	let cocktails = [];
-
+	let isSearchSuccessful = true;
+	let isSearchInitiated = false;
+	
 	async function searchCocktail() {
+		isSearchInitiated = true;
 		const url = `https://the-cocktail-db.p.rapidapi.com/search.php?s=${searchTerm}`;
 		const options = {
 			method: 'GET',
@@ -38,7 +41,6 @@
 			dispatch('searchCompleted', { cocktails, found: false });
 		}
 	}
-
 </script>
 
 <div class="-mx-2 sm:-mx-20 -my-10 bg-[#2f2f2f2a] backdrop-blur-sm py-10 px-2 sm:px-10">
