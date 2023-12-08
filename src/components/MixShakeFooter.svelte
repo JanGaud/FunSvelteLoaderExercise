@@ -6,7 +6,7 @@
 		'text-brand-gray hover:text-main-green transition transition-colors font-secondary';
 </script>
 
-<Footer class="bg-[#ffffffbe] backdrop-blur-3xl" footerType="logo">
+<Footer class="bg-[#ffffffd7] backdrop-blur-3xl" footerType="logo">
 	<div class="sm:flex sm:items-center sm:justify-between">
 		<a href="/">
 			<Icon icon="ep:cold-drink" class="me-3 h-10 w-10 hover:animate-pulse {linkClass}" /></a
