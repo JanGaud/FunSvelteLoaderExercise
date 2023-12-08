@@ -9,7 +9,7 @@
 <form class="flex gap-2">
 	<Search
 		size="md"
-		class="flex gap-2 items-center shadow-inner"
+		class="flex gap-2 items-center shadow-inner focus:ring-main-green focus:border-spark-yellow"
 		placeholder="Faites une recherche"
 	>
 		<button type="button" on:click={handleVoiceBtn} class="outline-none">

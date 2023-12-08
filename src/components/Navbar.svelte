@@ -13,7 +13,7 @@
 
 <Navbar color="none" class="bg-[#ffffffd7] backdrop-blur-3xl shadow-sm sm:rounded-b-xl px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0">
 	<NavBrand href="/">
-		<Icon icon="ep:cold-drink" color="text-main-green" class="me-3 h-12 w-12 text-main-green" />
+		<Icon icon="ep:cold-drink" color="text-main-green" class="me-3 h-12 w-12 text-main-green animate-pulse" />
 		<span class="self-center whitespace-nowrap font-secondary text-4xl font-semibold">Mix&Shake</span
 		>
 	</NavBrand>
