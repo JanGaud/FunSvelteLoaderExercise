@@ -30,6 +30,7 @@
 	}
 </script>
 
+<div class="-mx-2 sm:-mx-20 -my-10 bg-[#2f2f2f44] backdrop-blur-sm py-10 px-10">
 <form class="flex gap-2">
 	<Search
 		size="md"
@@ -52,3 +53,4 @@
 		Rechercher
 	</Button>
 </form>
+</div>
