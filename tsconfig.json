@@ -11,7 +11,8 @@
 		"strict": true,
 		"verbatimModuleSyntax": true,
 		"importsNotUsedAsValues": "remove",
-		"preserveValueImports": false
+		"preserveValueImports": false,
+		"outDir": "./build"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
