@@ -42,13 +42,13 @@
                     <ul class="list-disc list-inside text-brand-gray flex flex-wrap gap-4">
                         {#each Array.from({ length: 15 }, (_, i) => i + 1) as ingredientIndex}
                             {#if cocktail[`strIngredient${ingredientIndex}`]}
-                                <li>{cocktail[`strIngredient${ingredientIndex}`]}</li>
+                                <li class="text-sm">{cocktail[`strIngredient${ingredientIndex}`]}</li>
                             {/if}
                         {/each}
                     </ul>
                 </div>
                 <div class="group-hover:block hidden overflow-y-auto">
-                    <p class="mb-3 font-normal text-brand-gray leading-tight">{cocktail.strInstructions}</p>
+                    <p class="mb-3 text-sm text-brand-gray leading-tight">{cocktail.strInstructions}</p>
                 </div>
             </Card>
 		{/each}
