@@ -44,7 +44,7 @@ h6 {
 
 /* This will change the selection color for the entire page */
 ::selection {
-    background: #f6f930;
+    background: #f6f930b4;
     /* change to your preferred background color */
     color: #2f2f2f;
     /* change to your preferred text color */

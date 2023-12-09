@@ -10,9 +10,8 @@
 	 * @type {never[]}
 	 */
 	let cocktails = [];
-	let isSearchSuccessful = true;
 	let isSearchInitiated = false;
-	
+
 	async function searchCocktail() {
 		isSearchInitiated = true;
 		const url = `https://the-cocktail-db.p.rapidapi.com/search.php?s=${searchTerm}`;

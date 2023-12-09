@@ -2,6 +2,7 @@
 	import { Card, ImagePlaceholder } from 'flowbite-svelte';
 	import SearchBar from '../../components/SearchBar.svelte';
 	import SearchHeading from '../../components/SearchHeading.svelte';
+	import NoCocktailFound from '../../components/NoCocktailFound.svelte';
 
 	/**
 	 * @type {string | any[]}
@@ -25,6 +26,9 @@
 <div class="mt-20">
 	{#if !searchInitiated}
 		<SearchHeading />
+	{/if}
+	{#if searchInitiated && cocktails.length === 0 && !searchSuccessful}
+		<NoCocktailFound />
 	{/if}
 </div>
 
@@ -55,12 +59,6 @@
 						<p class="mb-3 text-sm text-brand-gray leading-tight">{cocktail.strInstructions}</p>
 					</div>
 				</Card>
-			{/each}
-		{:else if !searchSuccessful}
-			<p>Aucun cocktail trouvé!</p>
-		{:else}
-			{#each Array(6) as _, i}
-				<ImagePlaceholder class="bg-[#ffffff25] backdrop-blur-xl shadow-lg pr-4" />
 			{/each}
 		{/if}
 	{/if}
