@@ -13,6 +13,14 @@
 	let searchInitiated = false;
 
 	/**
+	 * @param {{ detail: { cocktails: string | any[]; }; }} event
+	 */
+	function handleDiceRoll(event) {
+		cocktails = event.detail.cocktails;
+		searchInitiated = true;
+	}
+
+	/**
 	 * @param {{ detail: { cocktails: string | any[]; isSearchSuccessful: boolean; }; }} event
 	 */
 	function handleSearchCompleted(event) {
@@ -23,7 +31,7 @@
 </script>
 
 <SearchBar on:searchCompleted={handleSearchCompleted} />
-<RandomDice />
+<RandomDice on:diceRoll={handleDiceRoll} />
 
 <div class="mt-20">
 	{#if !searchInitiated}
