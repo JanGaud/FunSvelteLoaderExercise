@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div class="mt-14 flex items-center gap-2 bg-[#97ca4b5d] backdrop-blur-xl rounded-md w-fit p-3">
+<div class="mt-14 flex items-center gap-2 text-center md:text-left bg-[#97ca4b5d] backdrop-blur-xl rounded-md w-full md:w-fit p-3">
 	<button class="w-14 h-14 active:animate-spin" on:click={changeDiceAndFetchCocktails}>
 		<Icon class="h-full w-full text-brand-gray drop-shadow-lg" icon={$currentDice.icon} />
 	</button>

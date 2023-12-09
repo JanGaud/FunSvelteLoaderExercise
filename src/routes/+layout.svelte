@@ -6,7 +6,7 @@
 
 <main class="bg-no-repeat bg-fixed bg-center bg-cover" style="background-image: url('/img/BackgroundImg.png');">
     <Navbar />
-    <section class="mx-2 sm:mx-20 my-28 min-h-screen">
+    <section class="mx-2 sm:mx-20 my-28 md:min-h-screen">
         <slot />
     </section>
     <MixShakeFooter />
