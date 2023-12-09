@@ -1,7 +1,8 @@
 <script>
-	import { Card, Button, Toggle, ImagePlaceholder } from 'flowbite-svelte';
+	import { Card, ImagePlaceholder } from 'flowbite-svelte';
 	import {} from 'flowbite-svelte';
 	import { onMount } from 'svelte';
+	const apiKey = import.meta.env.VITE_COCKTAIL_API_KEY;
 
 	/**
 	 * @type {string | any[]}
@@ -14,7 +15,7 @@
 			const response = await fetch(url, {
 				method: 'GET',
 				headers: {
-					'X-RapidAPI-Key': 'ded98c2facmsh419ce08fa864bb6p127517jsn2d81dbc7b359',
+					'X-RapidAPI-Key': apiKey,
 					'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
 				}
 			});

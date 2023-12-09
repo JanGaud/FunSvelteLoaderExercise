@@ -1,8 +1,9 @@
 <script>
-	import { Card, ImagePlaceholder } from 'flowbite-svelte';
+	import { Card } from 'flowbite-svelte';
 	import SearchBar from '../../components/SearchBar.svelte';
 	import SearchHeading from '../../components/SearchHeading.svelte';
 	import NoCocktailFound from '../../components/NoCocktailFound.svelte';
+	import RandomDice from '../../components/RandomDice.svelte';
 
 	/**
 	 * @type {string | any[]}
@@ -22,6 +23,7 @@
 </script>
 
 <SearchBar on:searchCompleted={handleSearchCompleted} />
+<RandomDice />
 
 <div class="mt-20">
 	{#if !searchInitiated}

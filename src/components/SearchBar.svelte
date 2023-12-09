@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { Search, Button } from 'flowbite-svelte';
 	import Icon from '@iconify/svelte';
+	 const apiKey = import.meta.env.VITE_COCKTAIL_API_KEY;
 
 	const dispatch = createEventDispatcher();
 
@@ -18,7 +19,7 @@
 		const options = {
 			method: 'GET',
 			headers: {
-				'X-RapidAPI-Key': 'ded98c2facmsh419ce08fa864bb6p127517jsn2d81dbc7b359',
+				'X-RapidAPI-Key': apiKey,
 				'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
 			}
 		};
