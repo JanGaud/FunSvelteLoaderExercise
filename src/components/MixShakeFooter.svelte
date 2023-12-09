@@ -12,12 +12,12 @@
 			<Icon icon="ep:cold-drink" class="me-3 h-10 w-10 text-gray-300" /></a
 		>
 		<FooterLinkGroup ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0">
-			<FooterLink aClass={linkClass} href="/a-propos">À propos</FooterLink>
-			<FooterLink aClass={linkClass} href="/confidentialite"
+			<FooterLink aClass={linkClass} href="/non-disponible">À propos</FooterLink>
+			<FooterLink aClass={linkClass} href="/non-disponible"
 				>Politique de confidentialité</FooterLink
 			>
-			<FooterLink aClass={linkClass} href="/license">License</FooterLink>
-			<FooterLink aClass={linkClass} href="/contact">Contact</FooterLink>
+			<FooterLink aClass={linkClass} href="/non-disponible">License</FooterLink>
+			<FooterLink aClass={linkClass} href="/non-disponible">Contact</FooterLink>
 		</FooterLinkGroup>
 	</div>
 	<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
