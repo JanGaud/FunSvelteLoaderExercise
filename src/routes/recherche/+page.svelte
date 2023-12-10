@@ -42,7 +42,7 @@
 	{/if}
 </div>
 
-<div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+<div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
 	{#if searchInitiated}
 		{#if cocktails.length > 0}
 			{#each cocktails as cocktail}
@@ -50,7 +50,7 @@
 					color="none"
 					img={cocktail.strDrinkThumb}
 					horizontal
-					class="bg-[#ffffff25] backdrop-blur-xl hover:bg-[#f6f93017] group md:h-56"
+					class="bg-[#ffffff25] backdrop-blur-xl hover:bg-[#f6f93017] group w-full md:h-56"
 				>
 					<h5 class="mb-2 text-2xl font-bold tracking-tight text-brand-gray">
 						{cocktail.strDrink}

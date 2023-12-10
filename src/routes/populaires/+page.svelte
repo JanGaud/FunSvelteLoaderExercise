@@ -32,14 +32,14 @@
 	});
 </script>
 
-<div class="flex flex-col items-center md:grid md:grid-cols-2 gap-4 mx-auto">
+<div class="flex flex-col items-center lg:grid md:grid-cols-2 gap-4 mx-auto">
 	{#if cocktails.length > 0}
 		{#each cocktails as cocktail}
 			<Card
 				color="none"
 				img={cocktail.strDrinkThumb}
 				horizontal
-				class="bg-[#ffffff25] backdrop-blur-xl hover:bg-[#f6f93017] group md:h-56"
+				class="bg-[#ffffff25] backdrop-blur-xl hover:bg-[#f6f93017] group w-full md:h-56"
 			>
 				<h5 class="mb-2 text-2xl font-bold tracking-tight text-brand-gray">{cocktail.strDrink}</h5>
 				<div class="mb-3 group-hover:hidden">
