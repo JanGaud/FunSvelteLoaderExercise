@@ -40,7 +40,7 @@
 		{/each}
 	{:else}
 		{#each Array(6) as _, i}
-			<ImagePlaceholder class="bg-[#ffffff25] backdrop-blur-xl shadow-lg pr-4" />
+			<ImagePlaceholder class="bg-[#ffffff25] backdrop-blur-xl shadow-lg w-full h-56 pr-0 sm:pr-4" />
 		{/each}
 	{/if}
 </div>

@@ -30,7 +30,7 @@
 
 <!-- mobile menu -->
 <div class={`fixed inset-0 w-full z-30 bg-[#ffffffd7] backdrop-blur-3xl transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-    <ul class="w-full flex flex-col items-center gap-6 my-40">
+    <ul class="w-full flex flex-col items-center gap-10 my-40">
         {#each links as link}
             <li class={mobileLinkClass}><a href={link.href} on:click={() => isOpen = false}>{link.name}</a></li>
         {/each}
