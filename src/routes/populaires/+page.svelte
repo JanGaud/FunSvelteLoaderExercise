@@ -52,7 +52,7 @@
 						{/each}
 					</ul>
 				</div>
-				<div class="group-hover:block hidden h-40 overflow-y-auto">
+				<div class="group-hover:block hidden h-fit overflow-y-auto">
 					<p class="mb-3 text-sm text-brand-gray leading-tight">{cocktail.strInstructions}</p>
 				</div>
 			</Card>
