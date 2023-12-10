@@ -24,7 +24,7 @@
 		{cocktail.strDrink}
 	</h5>
 	<button
-		class="absolute p-2 rounded-full shadow-md bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] text-brand-gray transition-colors top-1 right-1 w-10 h-10 flex items-center justify-center focus:outline-none active:outline-none"
+		class="absolute p-2 border border-brand-gray rounded-full shadow-md bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] text-brand-gray transition-colors top-1 right-1 w-10 h-10 flex items-center justify-center focus:outline-none active:outline-none"
 		on:click={toggleInstructions}
 	>
 		<Icon class="w-6 h-6" icon="icon-park:switch"  />
