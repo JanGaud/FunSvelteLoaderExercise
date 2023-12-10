@@ -42,7 +42,7 @@
 	{/if}
 </div>
 
-<div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
+<div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-4 mx-auto">
 	{#if searchInitiated}
 		{#if cocktails.length > 0}
 			{#each cocktails as cocktail}

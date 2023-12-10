@@ -32,7 +32,7 @@
 	});
 </script>
 
-<div class="flex flex-col items-center lg:grid md:grid-cols-2 gap-4 mx-auto">
+<div class="flex flex-col items-center lg:grid md:grid-cols-2 gap-10 md:gap-4 mx-auto">
 	{#if cocktails.length > 0}
 		{#each cocktails as cocktail}
 			<Card
