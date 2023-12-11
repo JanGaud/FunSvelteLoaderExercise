@@ -12,8 +12,8 @@
 		cocktails pour les restaurants du Québec. Optez pour notre expertise afin de sublimer votre
 		offre de boissons.</P
 	>
-	<Button color="cyan" class="bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] focus:ring-1 focus:ring-main-green hover:text-brand-gray shadow-md transition-colors" href="/non-disponible">
-		En savoir plus
+	<Button color="cyan" class="bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] focus:ring-1 focus:ring-main-green hover:text-brand-gray shadow-md transition-colors" href="/recherche">
+		Explorez les cocktails
 		<Icon icon="icons8:right-round" class="w-7 h-7 ms-2" />
 	</Button>
 </div>
