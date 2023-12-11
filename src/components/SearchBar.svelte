@@ -43,7 +43,7 @@
 	}
 </script>
 
-<div class="-mx-2 sm:-mx-20 -my-10 bg-[#2f2f2f2a] backdrop-blur-sm py-10 px-2 sm:px-10">
+<div class="-mx-2 sm:-mx-20 -my-14 sm:-my-10 bg-[#2f2f2f2a] backdrop-blur-sm py-8 sm:py-10 px-2 sm:px-10">
 	<form class="flex gap-2" on:submit|preventDefault={searchCocktail}>
 		<Search
 			size="md"

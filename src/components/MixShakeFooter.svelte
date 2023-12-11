@@ -16,7 +16,6 @@
 			<FooterLink aClass={linkClass} href="/non-disponible"
 				>Politique de confidentialité</FooterLink
 			>
-			<FooterLink aClass={linkClass} href="/non-disponible">License</FooterLink>
 			<FooterLink aClass={linkClass} href="/non-disponible">Contact</FooterLink>
 		</FooterLinkGroup>
 	</div>
