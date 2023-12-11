@@ -15,7 +15,7 @@
 
 <nav class="bg-[#ffffffd7] backdrop-blur-3xl shadow-sm sm:rounded-b-xl flex justify-between items-center px-2 sm:px-4 py-2.5 fixed w-full z-50 top-0 start-0 font-secondary">
     <a class="flex items-center" href="/">
-        <Icon icon="ep:cold-drink" color="text-main-green" class="me-3 h-10 w-10 md:h-14 md:w-14 text-main-green animate-pulse"/>
+        <Icon icon="fontisto:cocktail" color="text-main-green" class="me-3 h-10 w-10 md:h-14 md:w-14 text-main-green animate-pulse"/>
         <p class="self-center whitespace-nowrap text-4xl font-semibold">Mix&Shake</p>
     </a>
     <button class="md:hidden" on:click={() => isOpen = !isOpen}>
