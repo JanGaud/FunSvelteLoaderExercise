@@ -18,7 +18,7 @@
 	color="none"
 	img={cocktail.strDrinkThumb}
 	horizontal
-	class="bg-[#ffffff25] hover:bg-[#f6f93017] backdrop-blur-xl group md:h-64 w-full mx-auto"
+	class="bg-[#ffffff25] md:hover:bg-[#f6f93017] backdrop-blur-xl group md:h-64 w-full mx-auto"
 	><div>
 		<h5 class="mb-2 text-2xl font-bold tracking-tight text-brand-gray">
 			{cocktail.strDrink}
@@ -46,12 +46,12 @@
 				</div>
 			{/if}
 		</div>
-		<div class="w-full mt-10">
+		<div class="w-full h-6 mt-6">
 			<button
-				class="rounded-lg shadow-md bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] text-brand-gray transition-colors w-full h-8 flex gap-2 items-center justify-center focus:outline-none active:outline-none py-2"
+				class="rounded-lg shadow-md bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] text-brand-gray transition-colors w-full h-8 flex gap-2 items-center justify-center focus:outline-none active:outline-none"
 				on:click={toggleInstructions}
 			>
-				Voir plus <Icon class="w-5 h-5" icon="ph:plus-bold" />
+				<p class="text-sm">Voir plus</p> <Icon class="w-5 h-5" icon="ph:plus-bold" />
 			</button>
 		</div>
 	</div></Card
