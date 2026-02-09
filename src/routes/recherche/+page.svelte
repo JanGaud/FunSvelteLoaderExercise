@@ -1,42 +1,51 @@
 <script>
-	import { Card } from 'flowbite-svelte';
 	import SearchBar from '../../components/SearchBar.svelte';
 	import SearchHeading from '../../components/SearchHeading.svelte';
 	import NoCocktailFound from '../../components/NoCocktailFound.svelte';
 	import RandomDice from '../../components/RandomDice.svelte';
 	import CocktailCard from '../../components/CocktailCard.svelte';
 
-	/**
-	 * @type {string | any[]}
-	 */
+	/** @type {Array<any>} */
 	let cocktails = [];
+
 	let searchSuccessful = true;
 	let searchInitiated = false;
 
-	/**
-	 * @param {{ detail: { cocktails: string | any[]; }; }} event
-	 */
+	/** @param {{ detail: { cocktails: any[] } }} event */
 	function handleDiceRoll(event) {
-		cocktails = event.detail.cocktails;
+		/** @type {any[]} */
+		const incoming = event.detail.cocktails ?? [];
+
+		/** @type {any[]} */
+		const enriched = incoming.map(/** @param {any} cocktail */ (cocktail) => ({
+			...cocktail,
+			showInstructions: false
+		}));
+
+		cocktails = enriched;
+		searchSuccessful = true; // dice roll isn't a failed search
 		searchInitiated = true;
 	}
 
-	/**
-	 * @param {{ detail: { cocktails: string | any[]; isSearchSuccessful: boolean; }; }} event
-	 */
+	/** @param {{ detail: { cocktails: any[]; isSearchSuccessful: boolean } }} event */
 	function handleSearchCompleted(event) {
-		cocktails = event.detail.cocktails;
-		searchSuccessful = event.detail.isSearchSuccessful;
+		/** @type {any[]} */
+		const incoming = event.detail.cocktails ?? [];
+
+		/** @type {any[]} */
+		const enriched = incoming.map(/** @param {any} cocktail */ (cocktail) => ({
+			...cocktail,
+			showInstructions: false
+		}));
+
+		cocktails = enriched;
+		searchSuccessful = !!event.detail.isSearchSuccessful;
 		searchInitiated = true;
 	}
 
-	// Initialize cocktails with an additional property to track the display state
-	cocktails = cocktails.map((cocktail) => ({ ...cocktail, showInstructions: false }));
-
-	/**
-	 * @param {{ showInstructions: boolean; }} cocktail
-	 */
+	/** @param {any} cocktail */
 	function toggleInstructions(cocktail) {
+		// If you use this, prefer immutable update later; this is OK for now.
 		cocktail.showInstructions = !cocktail.showInstructions;
 	}
 </script>
@@ -48,17 +57,17 @@
 	{#if !searchInitiated}
 		<SearchHeading />
 	{/if}
+
 	{#if searchInitiated && cocktails.length === 0 && !searchSuccessful}
 		<NoCocktailFound />
 	{/if}
 </div>
 
 <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-4 mx-auto">
-    {#if searchInitiated}
-        {#if cocktails.length > 0}
-            {#each cocktails as cocktail}
-                <CocktailCard cocktail={cocktail} />
-            {/each}
-        {/if}
-    {/if}
+	{#if searchInitiated && cocktails.length > 0}
+		{#each cocktails as cocktail, index}
+			<!-- index is now defined (if you use it inside CocktailCard or for keys) -->
+			<CocktailCard {cocktail} />
+		{/each}
+	{/if}
 </div>

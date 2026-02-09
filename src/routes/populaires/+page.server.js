@@ -1,20 +1,24 @@
+import { RAPIDAPI_KEY } from '$env/static/private';
 
-// const apiKey = process.env.TMDB_API_KEY || 'ded98c2facmsh419ce08fa864bb6p127517jsn2d81dbc7b359';
+// @ts-ignore
+export const load = async ({ fetch }) => {
+    const url = 'https://the-cocktail-db.p.rapidapi.com/popular.php';
 
-// export const load = async () => {
-//     const fetchCocktails = async () => {
-//         const res = await fetch('https://the-cocktail-db.p.rapidapi.com/popular.php', {
-//             headers: {
-//                 'X-RapidAPI-Key': apiKey,
-//                 'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com',
-//             },
-//         });
-//         const data = await res.json();
-//         return {
-//             data: data.drinks,
-//         };
-//     };
-//     return {
-//         cocktails: await fetchCocktails(),
-//     };
-// };
+    const res = await fetch(url, {
+        headers: {
+            'X-RapidAPI-Key': RAPIDAPI_KEY,
+            'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
+        }
+    });
+
+    const text = await res.text();
+
+    if (!res.ok) {
+        // This will show you the real RapidAPI error message in your server logs
+        console.error('RapidAPI error:', res.status, text);
+        return { cocktails: [] };
+    }
+
+    const data = JSON.parse(text);
+    return { cocktails: data?.drinks ?? [] };
+};

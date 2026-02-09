@@ -1,10 +1,9 @@
 <script>
+	// @ts-nocheck
 	import { Card } from 'flowbite-svelte';
 	import Icon from '@iconify/svelte';
 
-	/**
-	 * @type {{ [x: string]: any; strDrinkThumb: any; strDrink: any; strInstructions: any; }}
-	 */
+	/** @type {any} */
 	export let cocktail;
 
 	let showInstructions = false;
@@ -12,47 +11,80 @@
 	function toggleInstructions() {
 		showInstructions = !showInstructions;
 	}
+
+	const ingredients = Array.from({ length: 15 }, (_, i) => i + 1)
+		.map((i) => {
+			const name = cocktail?.[`strIngredient${i}`];
+			const measure = cocktail?.[`strMeasure${i}`];
+			if (!name) return null;
+			return { name, measure: (measure ?? '').trim() };
+		})
+		.filter(Boolean);
 </script>
 
 <Card
 	color="none"
 	img={cocktail.strDrinkThumb}
 	horizontal
-	class="bg-[#ffffff25] md:hover:bg-[#f6f93017] backdrop-blur-xl group md:h-64 w-full mx-auto"
-	><div>
-		<h5 class="mb-2 text-2xl font-bold tracking-tight text-brand-gray">
-			{cocktail.strDrink}
-		</h5>
-		<div>
+	class="relative bg-[#ffffff18] md:hover:bg-[#f6f93012] backdrop-blur-xl group w-full mx-auto overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/10 transition-all md:hover:-translate-y-0.5 md:hover:shadow-xl md:h-64"
+>
+	<div class="flex flex-col h-full w-full">
+		<!-- Header -->
+		<div class="min-w-0">
+			<h5 class="text-2xl font-extrabold tracking-tight text-brand-gray leading-tight truncate">
+				{cocktail.strDrink}
+			</h5>
+		</div>
+
+		<!-- Content -->
+		<div class="mt-4 flex-1 min-h-0 pr-2 pb-12">
 			{#if !showInstructions}
-				<div class="h-28 w-80 overflow-y-auto">
-					<h6 class="text-base font-semibold text-brand-gray">Ingredients:</h6>
-					<ul class="list-disc list-inside text-brand-gray flex flex-wrap gap-4">
-						{#each Array.from({ length: 15 }, (_, i) => i + 1) as ingredientIndex}
-							{#if cocktail[`strIngredient${ingredientIndex}`]}
-								<li class="text-sm">
-									{cocktail[`strIngredient${ingredientIndex}`]} - {cocktail[
-										`strMeasure${ingredientIndex}`
-									]}
-								</li>
-							{/if}
+				<div class="max-h-[9rem] overflow-y-auto">
+					<h6 class="text-sm font-bold text-brand-gray/90 mb-2">
+						Ingrédients
+					</h6>
+
+					<div class="flex flex-wrap gap-2">
+						{#each ingredients as ing}
+							<span
+								class="text-xs px-2 py-1 rounded-lg bg-white/10 text-brand-gray ring-1 ring-white/10"
+							>
+								{ing.name}
+								{#if ing.measure}
+									<span class="opacity-80"> · {ing.measure}</span>
+								{/if}
+							</span>
 						{/each}
-					</ul>
+					</div>
 				</div>
 			{:else}
-				<div class="h-28 w-80 overflow-y-auto">
-					<h6 class="text-base font-semibold text-brand-gray">Instructions:</h6>
-					<p class="mb-3 text-sm text-brand-gray leading-tight">{cocktail.strInstructions}</p>
+				<div class="max-h-[9rem] overflow-y-auto">
+					<h6 class="text-sm font-bold text-brand-gray/90 mb-2">
+						Instructions
+					</h6>
+					<p class="text-sm text-brand-gray leading-relaxed whitespace-pre-line">
+						{cocktail.strInstructions}
+					</p>
 				</div>
 			{/if}
 		</div>
-		<div class="w-full h-6 mt-6">
-			<button
-				class="rounded-lg shadow-md bg-[#97ca4bc4] backdrop-blur-sm hover:bg-[#f6f930c0] text-brand-gray transition-colors w-full h-8 flex gap-2 items-center justify-center focus:outline-none active:outline-none"
-				on:click={toggleInstructions}
-			>
-				<p class="text-sm">Voir plus</p> <Icon class="w-5 h-5" icon="ph:plus-bold" />
-			</button>
-		</div>
-	</div></Card
->
+
+		<!-- Bottom-right switcher -->
+		<button
+			type="button"
+			on:click={toggleInstructions}
+			class="absolute bottom-4 right-4 border-lime-200 flex items-center gap-2 rounded-full px-3 py-2
+			       bg-white/15 hover:bg-white/25 backdrop-blur-md
+			       ring-1 ring-white/20 shadow-md
+			       text-brand-gray transition-all"
+		>
+			<Icon
+				class="w-5 h-5"
+				icon={showInstructions ? 'ph:notebook-bold' : 'ph:list-bullets-bold'}
+			/>
+			<span class="text-xs font-semibold">
+				{showInstructions ? 'Ingrédients' : 'Instructions'}
+			</span>
+		</button>
+	</div>
+</Card>
