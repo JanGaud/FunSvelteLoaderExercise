@@ -63,7 +63,7 @@
 						Instructions
 					</h6>
 					<p class="text-sm text-brand-gray leading-relaxed whitespace-pre-line">
-						{cocktail.strInstructions}
+						{cocktail.strInstructionsFR}
 					</p>
 				</div>
 			{/if}
