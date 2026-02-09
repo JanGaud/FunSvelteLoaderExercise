@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"@iconify/svelte": "^3.1.4",
 		"@playwright/test": "^1.30.0",
-		"@sveltejs/adapter-auto": "2.0.0",
+		"@sveltejs/adapter-vercel": "^5.10.3",
 		"@sveltejs/kit": "^1.7.2",
 		"@types/node-fetch": "^2.6.9",
 		"@typescript-eslint/eslint-plugin": "^5.52.0",
