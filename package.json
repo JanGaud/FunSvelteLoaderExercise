@@ -58,7 +58,7 @@
 		"tailwindcss"
 	],
 	"engines": {
-		"node": "18.x"
+		"node": ">=18"
 	},
 	"repository": {
 		"type": "git",
